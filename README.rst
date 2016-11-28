@@ -14,7 +14,7 @@ Why
 
 Python's built-in loggers are pretty handy - they're easily customized and come with useful functionality out
 of the box, including things like file rotation. These file handlers are thread-safe, but not process-safe, so, if
-you're running a webserver in a pre-forking environment, for example, you run the risk of your workers trampling
+you're running a webserver with multiple processes, you run the risk of your workers trampling
 over each other when writing to a common log file. File locking is a possible workaround, but that's yucky.
 
 To avoid this, it is recommended that one uses a socket-based logger (`a code sample is helpfully provided in the
